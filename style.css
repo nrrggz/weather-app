@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F4EAD5;
+    color: #222222;
+    border: 1px solid #222222;
+}
+
+.card{
+    border-radius: 25px;
+    border: 2px solid #222222;
+    box-shadow: 5px 10px 10px #888888;
+} 
+
+.container{
+    width: 720px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #CCD6A6;
+}
+
+.container header{
+    font-size: 25px;
+    font-weight: 500; 
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+    border-bottom:  1px solid #222222;
+}
+
+header i{
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.container.active header i {
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+.container .information{
+    margin: 21px 26px 32px;
+}
+
+.container.active .information{
+    display: none; 
+}
+
+.information .info-text{
+    display: none;
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px; 
+}
+
+.information .info-text.error{
+    display: block;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.information .info-text.pending{
+    display: block;
+    color: #0c5460 ;
+    background: #d1ecf1;
+    border: 1px solid #bee6eb;
+}
+
+.information :where(input, button){
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    border-radius: 7px; 
+}
+
+.information input{
+    text-align: center;
+    padding: 0 15px; 
+    border: 1px solid #222222;
+}
+
+.information input:is(:focus, :valid){
+    border: 2px solid #222222;
+}
+
+.barrier::before{
+    content: "or";
+    background: trans;
+    color: #b3b3b3;
+    font-size: 15px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.information button{
+    color: #F3EFE0;
+    cursor: pointer;
+    background-color: #222222 ;
+    transition: 0.25s ease;
+}
+
+.container .info-weather{
+    display: flex;
+    margin: 30px 0 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container.active .info-weather{
+    display: flex;
+}
+
+.info-weather img{
+    width: 150px;
+    height: 150px;
+}
+
+.info-weather .temperature{
+    display: flex;
+    font-weight:  500;
+    font-size: 50px;
+}
+
+.info-weather .temperature .data{
+    font-weight: 612px;
+}
+
+.info-weather .temperature .degree-celcius{
+    font-size:  40px;
+    display: block;
+    margin: 10px 5px 0 0;
+}
+
+.info-weather .weather{
+    font-size: 21px;
+    text-align: center;
+    margin: -6px 20px 15px;
+}
+
+.info-weather .location{
+    display: flex;
+    font-size: 19px;
+     padding: 0 20px;
+    text-align: center; 
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.location i{
+    font-size: 22px;
+    margin: 4px 5px 0 0;
+}
+
+.info-weather .description{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid #222222;
+}
+
+.description .column{
+    display: flex;
+    width: 100%;
+    padding: 3px 0px;
+    align-items: center;
+    justify-content: center; 
+}
+
+.column i{
+    color: #8da3a5;
+    font-size: 40px;
+}
+
+.column.details{
+    margin-left: 5.2px;
+}
+
+.details .temperature, .humidity, .wind, .pressure, .max-temperature, .min-temperature span{
+        font-size: 17px;
+        font-weight: 500;
+        margin-top: -3.5px; 
+}
+
+.details .temperature .degree-celcius{
+    margin: 0;
+    font-size: 17px;
+    pad: 0 2px 0 1px;
+}
+
+.details p{
+    font-size: 17px;
+    margin-top: 3.5px;
+    margin-bottom: 5.9px;
+    font-weight: bold;
+}
+
+.information button:hover{
+    background: #222222;
+}
+
+input[type=text2]{
+    width: 38%;
+}
